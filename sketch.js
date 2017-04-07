@@ -10,6 +10,9 @@ function setup(){
 
 function draw(){
     background(0);
+    display();    
+    move();
+
 
     //display ball
     stroke(255);
@@ -17,10 +20,6 @@ function draw(){
     fill(50,250,50);
     ellipse(x, y, 50, 50);
 
-    
-    //make ball move
-    y = y + speedy;
-    x = x + speedx;
     
     //ball changes direction when it hits wall
     if(x>600 || x<0){
@@ -30,3 +29,19 @@ function draw(){
         speedy = -speedy;
     }
 }
+function display(){
+    //display ball
+    stroke(255);
+    strokeWeight(4);
+    fill(50,250,50);
+    ellipse(x, y, 50, 50);
+}
+function move(){
+        //make ball move
+    y = y + speedy;
+    x = x + speedx;
+}
+  
+  function bounce(){
+      
+  }
